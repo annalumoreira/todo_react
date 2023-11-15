@@ -4,6 +4,15 @@ import { useState } from 'react'
 const TodoForm = ({addTodo}) => {
   const [value, setValue] = useState("");
   const [category, setCategory] = useState("");
+  const [imagemVisivel, setImagemVisivel] = useState(false);
+
+  const handleCLique = () => {
+    setImagemVisivel(true);
+
+    setTimeout(() => {
+      setImagemVisivel(false);
+    }, 1000);
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -15,7 +24,7 @@ const TodoForm = ({addTodo}) => {
   }
 
   return (
-    <div>
+    <div style={{ position: 'relative' }}>
         <h2>Criar nova tarefa</h2>
         <form onSubmit={handleSubmit}>
             <input 
@@ -32,9 +41,14 @@ const TodoForm = ({addTodo}) => {
                 <option value="Lazer">Lazer</option>
                 <option value="Doméstica">Doméstica</option>
             </select>
-            <button type='submit'>Criar</button>
-        </form>
-
+        <div>
+          <button
+            type='submit' onClick={handleCLique}>Criar</button>
+        </div>
+        <div className="imagem-container" style={{ position: 'absolute', top: '100%', left: '-51%', transform: 'translate(-50%, -200%)' }}>
+          {imagemVisivel && <img className='imagem-aparece' src='../img/noted.png' alt='Noted' />}
+        </div>
+      </form>
     </div>
   )
 }

@@ -101,3 +101,24 @@ input, select {
 .filter-options div {
   flex: 1 1 0;
 }
+
+.imagem-aparece {
+  margin: 15px;
+  padding: 15px;
+  justify-content: center;
+
+  visibility: visible;
+  opacity: .5; /* Define a opacidade como 1 (totalmente visível) */
+  transition: opacity 4s; /* Adiciona uma transição de 1 segundo para suavizar a visibilidade */
+}
+
+.imagem-aparece.hidden {
+  visibility: hidden; /* Esconde a imagem */
+  opacity: 0; /* Define a opacidade como 0 (totalmente invisível) */
+  
+}
+
+img {
+  justify-content: center;
+  width: 100%;
+}
