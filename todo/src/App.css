@@ -55,7 +55,7 @@ button:hover {
 }
 
 .todo {
-  background-color: #fff;
+  background-color: #ffffff43;
   box-shadow: 0 0 10px rgba(0, 0, 0, .1);
   padding: 10px;
   margin-bottom: 10px;
@@ -66,11 +66,11 @@ button:hover {
 }
 
 .complete {
-  background-color: #66bc94;
+  background-color: #333974;
 }
 
 .remove {
-  background-color: #d66060;
+  background-color: rgb(84, 64, 94);
 
 }
 

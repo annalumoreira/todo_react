@@ -4,7 +4,10 @@ const Todo = ({ todo, removeTodo, completeTodo }) => {
   return (
     <div 
     className="todo" 
-    style={{textDecoration: todo.isCompleted ? "line-through" : "" }}>
+    style={{
+      textDecoration: todo.isCompleted ? "line-through" : "",
+      background: todo.isCompleted ? "#333a741e" : ""
+      }}>
           <div className="content">
             <p>{todo.text}</p>
             <p className="category">({todo.category})</p>
